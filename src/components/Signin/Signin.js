@@ -19,7 +19,7 @@ class Signin extends React.Component {
         const { signInEmail, signInPassword } = this.state;
 
         fetch('https://face-recognition-brain-back-end.onrender.com/signin', {
-            method: 'put',
+            method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 email: signInEmail,
