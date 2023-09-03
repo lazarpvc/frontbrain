@@ -9,6 +9,8 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Rank from './components/Rank/Rank';
 import './App.css';
 
+
+
 const returnClarifaiRequestOptions = (imageUrl) => {
   const PAT = '903a365b273a401984c9a044d238c34c';
   const USER_ID = 'lazarpvc';
@@ -104,8 +106,8 @@ class App extends Component {
       .then(response => {
         console.log('hi', response)
         if (response) {
-          fetch('https://bckendtest.onrender.com/image', {
-            method: 'post',
+          fetch('https://backbrain.onrender.com/image', {
+            method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               id: this.state.user.id
